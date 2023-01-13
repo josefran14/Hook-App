@@ -11,7 +11,6 @@ export const useForm = (initialForm = {}) => {
            ...formState,
            [name] : value
           })
-          console.log({name, value})
       }
 
       const onResetForm = () =>{
@@ -19,6 +18,7 @@ export const useForm = (initialForm = {}) => {
       }
 
   return{
+     ...formState,
      formState: formState,
      onInputChange: onInputChange,
      onResetForm: onResetForm
